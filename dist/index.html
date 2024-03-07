@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.4.11"><title>Stanford OVAL Lab</title><meta charset="UTF-8"><link rel="icon" href="../assets/favicon.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="../dist/effect-carousel.min.css"><link rel="stylesheet" href="./main.css"><link rel="stylesheet" href="src/components/Blob/blob.css"><title>Carousel Slider</title><link rel="stylesheet" href="/_astro/index.B1mYl13E.css" />
+<style>.news-link a{color:#fff;font-style:italic;font-weight:600}span{color:rgb(var(--accent-light))}main[data-astro-cid-j7pv25f6]{color:#fff;font-size:20px;line-height:1.6}.astro-a[data-astro-cid-j7pv25f6]{position:absolute;top:-32px;left:50%;transform:translate(-50%);width:220px;height:auto;z-index:-1}.header[data-astro-cid-j7pv25f6]{font-size:5rem;font-weight:700;line-height:1;text-align:center;margin-bottom:0;color:#d9c5ed}p[data-astro-cid-j7pv25f6]{color:#d9c5ed}h3[data-astro-cid-j7pv25f6]{font-size:1rem;font-weight:700;line-height:1;text-align:center;margin:15px}.text-gradient[data-astro-cid-j7pv25f6]{background-image:var(--accent-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:400%;background-position:0%}.text-accent[data-astro-cid-j7pv25f6]{color:rgb(var(--accent))}.instructions[data-astro-cid-j7pv25f6]{margin-bottom:2rem;border:1px solid rgba(var(--accent-light),25%);background:linear-gradient(rgba(var(--accent-dark),66%),rgba(var(--accent-dark),33%));padding:1.5rem;border-radius:8px}.instructions[data-astro-cid-j7pv25f6] code[data-astro-cid-j7pv25f6]{font-size:.8em;font-weight:700;background:rgba(var(--accent-light),12%);color:rgb(var(--accent-light));border-radius:4px;padding:.3em .4em}.instructions[data-astro-cid-j7pv25f6] strong[data-astro-cid-j7pv25f6]{color:rgb(var(--accent-light))}.link-card-grid[data-astro-cid-j7pv25f6]{display:grid;grid-template-columns:repeat(auto-fit,minmax(24ch,1fr));gap:2rem;padding:0}.swiper[data-astro-cid-j7pv25f6]{width:600px;height:300px}.subheader[data-astro-cid-j7pv25f6]{font-size:1.2rem;color:#d9c5ed}html{scroll-behavior:smooth}
+</style></head> <body> <header data-testId="header" class="mb-5 py-5 flex">  <nav class="astronav-items astronav-toggle flex-1 flex justify-start">  <a aria-label="navigation link" href="/" style="color:rgb(var(--accent-light));" class="flex py-2 text-xl text-white hover:text-orange dark:hover:text-orange lg:px-3">
+Open Virtual Assistant Lab
+</a>  </nav> <nav class="astronav-items astronav-toggle flex-1 flex justify-center ">  <ul class="flex flex-col lg:flex-row lg:gap-3">  <li> <a aria-label="navigation link" href="/projects" style="color:rgb(var(--accent-light));" class="flex py-2  text-lg text-white hover:text-orange dark:hover:text-orange lg:px-3"> Projects </a> </li>  <li> <a aria-label="navigation link" href="/publications" style="color:rgb(var(--accent-light));" class="flex py-2  text-lg text-white hover:text-orange dark:hover:text-orange lg:px-3"> Publications </a> </li>  <li> <a aria-label="navigation link" href="/joinus" style="color:rgb(var(--accent-light));" class="flex py-2  text-lg text-white hover:text-orange dark:hover:text-orange lg:px-3"> Join Us </a> </li>  </ul>  </nav> <nav class="astronav-items astronav-toggle flex-1 flex justify-end">  <a href="/projects"> <button style="background-color:rgb(var(--accent))" class="rounded-xl px-5 py-2 mr-5 text-center transition focus-visible:ring-2 ring-offset-2 ring-orange text-white" size="sm">Try Our Demos</button></a>  </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu"
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> </header>  <main data-astro-cid-j7pv25f6> <div class="mx-24 " data-astro-cid-j7pv25f6> <p style="margin-top: 10px" class="header" data-astro-cid-j7pv25f6>The Stanford OVAL Lab</p> <p class="header" data-astro-cid-j7pv25f6><span class="text-accent" data-astro-cid-j7pv25f6>Knowledge Center</span></p> <h3 class="subheader" data-astro-cid-j7pv25f6>LED BY PROFESSOR MONICA LAM</h3> <p style="text-align:center" data-astro-cid-j7pv25f6>
+We build LLM-Augmented Cognition Systems (LLM-CSys) that combine the expressive language skills of LLMs with the interpretability and reliability of software systems. We connect LLMs with databases, compilers, and executive functions to create assistants that are more trustworthy and helpful for users.
+</p> <div data-astro-cid-j7pv25f6> <div class="blob" data-astro-cid-j7pv25f6></div> </div> <div id="app">
+  <!-- Carousel slider -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <!-- elements with  "swiper-carousel-animate-opacity" class will have animated opacity -->
+        <a href="https://yelpbot.genie.stanford.edu/">
+          <div
+            class="swiper-carousel-animate-opacity flex flex-col items-center"
+          >
+            <img src="src/assets/images/yelpbot-fig-final.png" alt="" />
+            <div class="max-w-xl mt-2 flex flex-col items-center">
+              <p class="text-2xl text-center font-semibold">
+                Search stuctured and unstructured data using natural language in
+                <span class="font-bold" style="color: rgb(var(--accent))"
+                  >YelpBot</span
+                >
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://wikichat.genie.stanford.edu/">
+          <div
+            class="swiper-carousel-animate-opacity flex flex-col items-center"
+          >
+            <img src="src/assets/images/wikichat-fig.png" alt="" />
+            <div class="max-w-xl mt-2 flex flex-col items-center">
+              <p class="text-2xl text-center font-semibold">
+                Remove hallucination by querying out for claims and synthesizing
+                the data with
+                <span class="font-bold" style="color: rgb(var(--accent))"
+                  >WikiChat</span
+                >
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="/projects#Noora">
+          <div
+            class="swiper-carousel-animate-opacity flex flex-col items-center"
+          >
+            <img src="src/assets/images/noora-fig-final.png" alt="" />
+            <div class="max-w-xl mt-2 flex flex-col items-center">
+              <p class="text-2xl text-center font-semibold">
+                Users can receive feedback on drills to practice social
+                conversation with
+                <span class="font-bold" style="color: rgb(var(--accent))"
+                  >Noora</span
+                >
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <a href="https://storm.genie.stanford.edu/">
+          <div
+            class="swiper-carousel-animate-opacity flex flex-col items-center"
+          >
+            <img src="src/assets/images/storm-fig-final.png" alt="" />
+            <div class="max-w-xl mt-2 flex flex-col items-center">
+              <p class="text-2xl text-center font-semibold">
+                Surf the web on any topic and receive a generated outline
+                covering different viewpoints with
+                <span class="font-bold" style="color: rgb(var(--accent))"
+                  >STORM</span
+                >
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="src/components/Swiper/swiper.css" />
+<link rel="stylesheet" href="src/components/Blob/blob.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="src/dist/effect-carousel.min.js"></script>
+<script src="src/components/Swiper/swiper.js"></script>
+ </div> <div class="flex justify-center align-center mb-20" data-astro-cid-j7pv25f6> <a href="/projects" data-astro-cid-j7pv25f6> <button style="background-color:rgb(var(--accent))" class="rounded-xl px-7 py-2 mr-5 text-center transition text-white" name="Download CV" data-astro-cid-j7pv25f6>Try Our Demos</button> </a> <a href="#about" style="color:rgb(var(--accent))" class="flex self-center" data-astro-cid-j7pv25f6>Learn More About OVAL
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6 mt-1" data-astro-cid-j7pv25f6> <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" data-astro-cid-j7pv25f6></path> </svg> </a> </div> <div style="background-color:rgb(var(--accent-off))" class="pb-20" data-astro-cid-j7pv25f6> <div class="mx-80 pt-24" data-astro-cid-j7pv25f6> <h3 id="about" class="subheader" data-astro-cid-j7pv25f6>ABOUT OUR WORK</h3> <div class="mx-12 flex-col" data-astro-cid-j7pv25f6> <p class="text-4xl font-bold  text-center" data-astro-cid-j7pv25f6> <span data-astro-cid-j7pv25f6><img class="h-8 w-8 inline-block align-top mr-3 opacity-50 " src="src/assets/images/quote-start.svg" data-astro-cid-j7pv25f6></span> Standalone LLMs are like the speech centers in our brains. They
+				rely on the prefrontal cortex for executive functions (attention, long-term planning) to communicate effectively. <span data-astro-cid-j7pv25f6><img class="h-8 w-8 inline-block ml-3 opacity-50" src="src/assets/images/quote-end.svg" data-astro-cid-j7pv25f6><span data-astro-cid-j7pv25f6></span></span></p> <h3 class="subheader" data-astro-cid-j7pv25f6>- Professor <a href="https://suif.stanford.edu/~lam/" class="text-white font-semibold" data-astro-cid-j7pv25f6>Monica Lam</a></h3> </div> <h4 class="text-white mt-6 font-semibold " data-astro-cid-j7pv25f6>Recent talk</h4> <div class="text-center" data-astro-cid-j7pv25f6> <a href="https://www.youtube.com/watch?v=Sj4S_eGJitI" data-astro-cid-j7pv25f6> <img class="mx-auto h-auto w-6/12 rounded-3xl" src="src/assets/images/monica-talk.png" data-astro-cid-j7pv25f6> </a> </div> <a href="https://www.youtube.com/watch?v=Sj4S_eGJitI&quot;" data-astro-cid-j7pv25f6><p style="color:#ffffff" class="text-center font-semibold" data-astro-cid-j7pv25f6>"Controlling and Grounding Large Language Models for Conversational Assistants"</p></a> <p class="text-center" data-astro-cid-j7pv25f6>Generative AI and Foundation Models Workshop, Stanford Computer Forum, April 12, 2023</p> <hr class="h-px my-8 mx-80 bg-gray-200 border-0 dark:bg-gray-700" data-astro-cid-j7pv25f6> <p class="mt-6 font-400" data-astro-cid-j7pv25f6> We invite students, researchers, and corporations to <a href="/joinus" class="font-bold" style="color:white;" data-astro-cid-j7pv25f6>join us</a> to advance the state of the art in conversational agents research and to apply the technology to real-world use cases.</p> <div style="border-color:rgb(var(--accent))" class="mt-12 border shadow-lg shadow-indigo-500/50 rounded-xl border-black border-4 p-8" data-astro-cid-j7pv25f6> <h4 class="text-white font-semibold" data-astro-cid-j7pv25f6>News</h4> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var v=Object.defineProperty;var A=(c,s,a)=>s in c?v(c,s,{enumerable:!0,configurable:!0,writable:!0,value:a}):c[s]=a;var d=(c,s,a)=>(A(c,typeof s!="symbol"?s+"":s,a),a);var u;{let c={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t)},s=t=>{let[e,n]=t;return e in c?c[e](n):void 0},a=t=>t.map(s),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([e,n])=>[e,s(n)]));customElements.get("astro-island")||customElements.define("astro-island",(u=class extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var f;if(!this.hydrator||!this.isConnected)return;let e=(f=this.parentElement)==null?void 0:f.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},l=this.querySelectorAll("template[data-astro-template]");for(let o of l){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let h;try{h=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",b=this.getAttribute("component-export");throw b&&(i+=` (export ${b})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let p;await this.hydrator(this)(this.Component,h,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url"),[l,{default:h}]=await Promise.all([import(this.getAttribute("component-url")),r?import(r):()=>()=>{}]),p=this.getAttribute("component-export")||"default";if(!p.includes("."))this.Component=l[p];else{this.Component=l;for(let y of p.split("."))this.Component=this.Component[y]}return this.hydrator=h,this.hydrate},e,this)}catch(r){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,r)}}attributeChangedCallback(){this.hydrate()}},d(u,"observedAttributes",["props"]),u))}})();</script><astro-island uid="Z12wA7U" prefix="r0" component-url="/_astro/News.CH5p_oMe.js" component-export="default" renderer-url="/_astro/client.D9Vng9vH.js" props="{&quot;data-astro-cid-j7pv25f6&quot;:[0,true]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;News&quot;,&quot;value&quot;:true}" await-children=""><ul><li><p class="py-2 text-lg"><span class="opacity-50">Dec 2023<!-- --> —</span> <span class="news-link">Elizaveta Pertseva presented the paper <a href="https://arxiv.org/abs/2305.14202">Fine-tuned LLMs Know More, Hallucinate Less with Few-Shot Sequence-to-Sequence Semantic Parsing over Wikidata</a> at the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), Singapore.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">Dec 2023<!-- --> —</span> <span class="news-link">Sina Semnani presented the paper <a href="https://arxiv.org/abs/2305.14292">WikiChat: Stopping the Hallucination of Large Language Model Chatbots by Few-Shot Grounding on Wikipedia</a> at the Findings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), Singapore.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">July 2023<!-- --> —</span> <span class="news-link">Mehrad Moradshahi presented the paper <a href=https://arxiv.org/abs/2306.17674">X-RiSAWOZ: High-Quality End-to-End Multilingual Dialogue Datasets and Few-shot Agents</a> at the Association for Computational Linguistics (ACL), Toronto, Canada.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">May 2023<!-- --> —</span> <span class="news-link">Monica Lam presented a plenary talk "Controlling and Grounding Large Language Models for Conversational Assistants" at the Xpo Research Symposium of the Institute for Computational and Mathematical Engineering.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">May 2023<!-- --> —</span> <span class="news-link">Mehrad Moradshahi presented two papers <a href="https://arxiv.org/abs/2302.09424">Zero and Few-Shot Localization of Task-Oriented Dialogue Agents with a Distilled Representation</a> and <a href="https://arxiv.org/abs/2111.02574">Contextual Semantic Parsing for Multilingual Task-Oriented Dialogues</a> at the European Chapter of the Association for Computational Linguistics (EACL), Dubrovnik, Croatia.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">April 2023<!-- --> —</span> <span class="news-link">Monica Lam presented <a href=https://www.youtube.com/watch?v=Sj4S_eGJitI">"Controlling and Grounding Large Language Models for Conversational Assistants"</a> at the Generative AI and Foundation Models Workshop in the Computer Science Annual Affiliates Meeting.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">Nov 2022<!-- --> —</span> <span class="news-link">Monica Lam presented a keynote at the 9th International Conference on Information Management and Big Data (SIMBig) in Lima, Peru.</span></p></li><li><p class="py-2 text-lg"><span class="opacity-50">Nov 2022<!-- --> —</span> <span class="news-link">Monica Lam presented a keynote on "Taming Neural Language Models into Trustworthy Conversational Virtual Assistants" at the Open Data Science Conference in San Francisco.</span></p></li></ul><!--astro:end--></astro-island> </div> <div data-astro-cid-j7pv25f6> <h4 class="mt-12 text-white font-semibold" data-astro-cid-j7pv25f6>Acknowledgement</h4> <p data-astro-cid-j7pv25f6>OVAL is supported by the National Science Foundation under Grant No.<a style="color:#ffffff" class="font-semibold" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1900638&HistoricalAwards=false" data-astro-cid-j7pv25f6> 1900638</a>, the Alfred P. Sloan Foundation under Grant No. G-2020-13938, Microsoft, and the Verdant Foundation. We also want to thank our partners Alpha Vantage, Baidu, Picovoice, and Yelp for their support.</p> </div> </div></div></main> <h1 class="text-3xl font-bold underline" data-astro-cid-j7pv25f6></h1>  </body></html> 
