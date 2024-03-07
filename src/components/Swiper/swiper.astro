@@ -1,0 +1,100 @@
+---
+---
+
+<div class="swiper">
+  <div class="swiper-wrapper mt-10" data-cursor="swipe">
+    <div class="swiper-slide">
+      <a href="https://yelpbot.genie.stanford.edu/">
+        <div class="swiper-carousel-animate-opacity flex flex-col items-center">
+          <img src="/assets/images/yelpbot-fig-final.png" alt="" />
+          <div class="max-w-xl mt-2 flex flex-col items-center">
+            <p class="text-2xl text-center font-semibold">
+              Search stuctured and unstructured data using natural language in
+              YelpBot
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="https://wikichat.genie.stanford.edu/">
+        <div class="swiper-carousel-animate-opacity flex flex-col items-center">
+          <img src="/assets/images/wikichat-fig.png" alt="" />
+          <div class="max-w-xl mt-2 flex flex-col items-center">
+            <p class="text-2xl text-center font-semibold">
+              Remove hallucination by querying out for claims and synthesizing
+              the data with WikiChat
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="/projects#Noora">
+        <div class="swiper-carousel-animate-opacity flex flex-col items-center">
+          <img src="/assets/images/noora-fig-final.png" alt="" />
+          <div class="max-w-xl mt-2 flex flex-col items-center">
+            <p class="text-2xl text-center font-semibold">
+              Users can receive feedback on drills to practice social
+              conversation with Noora
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-slide">
+      <a href="https://storm.genie.stanford.edu/">
+        <div class="swiper-carousel-animate-opacity flex flex-col items-center">
+          <img src="/assets/images/storm-fig-final.png" alt="" />
+          <div class="max-w-xl mt-2 flex flex-col items-center">
+            <p class="text-2xl text-center font-semibold">
+              Surf the web on any topic and receive a generated outline covering
+              different viewpoints with STORM
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  import "../Swiper/swiper.css";
+  import EffectCarousel from "../Swiper/effectcarousel.js";
+  import Swiper from "swiper";
+  import { register } from "swiper/element/bundle";
+  register();
+
+  const swiper = new Swiper(".swiper", {
+    // pass EffectCarousel module to modules
+    modules: [EffectCarousel],
+    // specify "carousel" effect
+    effect: "carousel",
+    // carousel effect parameters
+    carouselEffect: {
+      // opacity change per side slide
+      opacityStep: 0.33,
+      // scale change per side slide
+      scaleStep: 0.2,
+      // amount of side slides visible, can be 1, 2 or 3
+      sideSlides: 1,
+    },
+    grabCursor: true,
+    loop: true,
+    loopAdditionalSlides: 0,
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    autoplay: {
+      delay: 4000,
+    },
+  });
+</script>

@@ -1,4 +1,6 @@
 // eslint-disable-next-line
+import EffectCarousel from "./effect-carousel.esm";
+
 const swiper = new Swiper(".swiper", {
   // pass EffectCarousel module to modules
   modules: [EffectCarousel],
