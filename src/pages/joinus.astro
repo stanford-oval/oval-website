@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import News from '../components/News/News.jsx';
+import DropdownMenu from "../components/dropdown-menu";
+import MySwiper from '../components/ProjectSwiper.jsx';
+import Swiper from '../components/Swiper/swiper.html';
+import Blob from '../components/Blob/index.html';
+---
+
+<Layout title="Stanford OVAL Lab">
+	<main>
+		<div class="mx-80 ">
+		<p style="margin-top: 10px" class="header">Join Us</p>
+		
+
+			<div class="blob"></div>
+			
+		<h4 class="text-white mt-6 font-semibold " >Potential Partners</h4>
+		<p>We'd like to hear from you to understand the real-world use cases.
+		We welcome collaboration to experiment with the use of conversational technology in real-world cases.
+		
+		We welcome support via gift funds to accelerate our open-source research and to broaden our ability to collaborate and disseminate our results.</p>
+
+		<p class="mt-6">We recommend an annual support of $250,000, the amount of funding needed to support two students a year.
+
+		Any partial funding for the rest of 2023 (e.g. $100,000) is appreciated to fund new students in the upcoming school year.</p>
+		<hr class="h-px my-8 opacity-10 bg-gray-100 border-0 ">
+		<h4 class="text-white mt-6 font-semibold " >PhD Students</h4>
+		<p>We welcome PhD students to join our team! Please contact Prof. Monica Lam.</p>
+		<hr class="h-px my-8 opacity-10 bg-gray-100 border-0 ">
+		<h4 class="text-white mt-6 font-semibold " >Master's and Undergraduate Students</h4>
+		<p>Students interested in joining the Open Virtual Assistant Lab are encouraged to take the CS 224V course (Conversational Virtual Assistants with Deep Learning) offered in the Fall quarter.
+		The course provides the background material necessary to conduct research in conversational agents as welll as an opportunity to conduct an independent research project, supervised by Prof. Monica Lam.</p>
+
+		<p class="mt-6">Successful demonstration of independent research capability in the Fall quarter can lead to a Research Assistantship in subsequent quarters.</p>
+				
+	</main>
+</Layout>
+
+<style>
+	main {
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	.header {
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 0;
+		color: #D9C5ED
+
+	}
+	p {
+		color: #D9C5ED
+	}
+	h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin: 15px;
+		
+
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.text-accent {
+		color: rgb(var(--accent));
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.swiper {
+		width: 600px;
+		height: 300px;
+		}
+	.subheader {
+		font-size: 1.2rem;
+		color: #D9C5ED
+	}
+</style>

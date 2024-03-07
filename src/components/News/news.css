@@ -1,0 +1,8 @@
+.news-link a {
+  color: white;
+  font-style: italic;
+  font-weight: 600;
+}
+span {
+  color: rgb(var(--accent-light));
+}

@@ -1,0 +1,67 @@
+---
+interface Props {
+	
+	title: string;
+	body: string;
+	href: string;
+	image_src: string;
+	demo_link: string;
+	paper_link: string;
+	demo_coming_soon: boolean;
+}
+
+const { href, title, body, image_src, demo_link, paper_link, demo_coming_soon } = Astro.props;
+---
+
+<li id={title} class="link-card rounded-3xl">
+	<div class="flex p-4">
+		<img src={image_src} class="h-60 w-auto mr-10"/>
+		<div style="color:rgb(var(--accent-light))" class="flex flex-col p-4">
+			<h2 class="text-3xl font-bold">
+				{title}	
+			</h2>
+			<p>{body}</p>
+			<div style="color:rgb(var(--accent-light))" class="flex">
+				{demo_link && <a style="color:white" class="font-bold mt-2 astro-a" href={demo_link}>Demo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-5 inline-block w-4 h-4">
+										<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+									</svg></a> }
+				{demo_coming_soon && <p style="color:white" class="font-bold mt-2" >Demo Coming Soon</p>}
+				{paper_link && <a style="color:white" class="font-bold mt-2 astro-a" href={paper_link}>Paper<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-5 inline-block w-4 h-4">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+				</svg></a> }
+			</div>
+			
+		</div>
+	</div>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: rgb(var(--accent-off));
+		background-image: none;
+		background-size: 400%;
+		
+		background-position: 100%;
+		
+		
+	}
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		background-color: rgb(var(--accent-off));;
+		opacity: 0.8;
+	}
+	
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+	}
+	
+	
+</style>

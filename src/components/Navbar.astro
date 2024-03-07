@@ -1,0 +1,69 @@
+---
+
+import Button from '../components/Button.astro';
+import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+
+const menuitems = [
+	
+	{
+		title: 'Projects',
+		path: '/projects',
+	},
+    {
+		title: 'Publications',
+		path: '/publications',
+	},
+    
+	
+    {
+		title: 'Join Us',
+		path: '/joinus',
+	},
+];
+---
+
+<header data-testId="header" class="mb-5 py-5 flex" >
+	<Astronav >
+        <MenuItems class="flex-1 flex justify-start" >
+			
+                <a
+                    aria-label="navigation link"
+                    href="/"
+                    style="color:rgb(var(--accent-light));"
+                    class="flex py-2 text-xl text-white hover:text-orange dark:hover:text-orange lg:px-3"
+                >
+                    Open Virtual Assistant Lab
+                </a>
+          
+		</MenuItems>
+		
+		<MenuItems class="flex-1 flex justify-center ">
+			<ul class="flex flex-col lg:flex-row lg:gap-3">
+				{
+					menuitems.map((item) => (
+						<>
+							<li>
+								<a
+									aria-label="navigation link"
+									href={item.path}
+                                    style="color:rgb(var(--accent-light));"
+									class="flex py-2  text-lg text-white hover:text-orange dark:hover:text-orange lg:px-3"
+								>
+									{item.title}
+								</a>
+							</li>
+						</>
+					))
+				}
+				
+			</ul>
+		</MenuItems>
+
+        <MenuItems class="flex-1 flex justify-end" >
+			
+             <a href="/projects"> <button  style="background-color:rgb(var(--accent))" class="rounded-xl px-5 py-2 mr-5 text-center transition focus-visible:ring-2 ring-offset-2 ring-orange text-white"  size={'sm'} >Try Our Demos</button></a>
+          
+		</MenuItems>
+       
+	</Astronav>
+</header>

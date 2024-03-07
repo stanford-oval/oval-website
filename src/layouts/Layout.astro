@@ -1,0 +1,65 @@
+---
+import Navbar from '../components/Navbar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="../assets/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<link rel="stylesheet" href="../dist/effect-carousel.min.css">
+		<link rel="stylesheet" href="./main.css">
+		<link rel="stylesheet" href="src/components/Blob/blob.css">
+		<title>Carousel Slider</title>
+	</head>
+	<body
+		
+	>
+		<Navbar />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 105, 61, 229;
+		--accent-off: 67, 42, 138;
+		--accent-light: 217, 197, 237;
+		--accent-dark: 76, 6, 161;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-dark)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-size: 224px;
+		background-color: #231941;
+		background-image: url("/src/assets/images/noise-purple-3.svg");
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
