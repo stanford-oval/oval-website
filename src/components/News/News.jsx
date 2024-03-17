@@ -44,7 +44,7 @@ const newsItems = [
   },
 ];
 
-export default function DropdownMenu() {
+export default function News() {
   return (
     <ul>
       {newsItems.map((item) => (

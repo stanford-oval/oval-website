@@ -1,0 +1,14 @@
+---
+interface Props {
+	name: string;
+	href: string;
+	image_src: string;
+}
+
+const { href, name, image_src } = Astro.props;
+---
+
+<div id={name} class="flex flex-col align-center">
+	<img src={image_src} class="w-32 h-32 self-center rounded-full "/>
+	<p style="color:rgb(var(--accent-light))" class="text-center"><a href={href}>{name}</a></p>
+</div>

@@ -30,8 +30,8 @@ export default function CarouselSlider({ swiper, on, extendParams }) {
       3: 0.2,
     }[sideSlides];
     const translateModifier = {
-      1: 50,
-      2: 50,
+      1: 0,
+      2: 0,
       3: 67,
     }[sideSlides];
 

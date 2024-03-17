@@ -7,10 +7,10 @@ interface Props {
 	image_src: string;
 	demo_link: string;
 	paper_link: string;
-	demo_coming_soon: boolean;
+	misc_text: string;
 }
 
-const { href, title, body, image_src, demo_link, paper_link, demo_coming_soon } = Astro.props;
+const { href, title, body, image_src, demo_link, paper_link, misc_text } = Astro.props;
 ---
 
 <li id={title} class="link-card rounded-3xl">
@@ -25,7 +25,7 @@ const { href, title, body, image_src, demo_link, paper_link, demo_coming_soon } 
 				{demo_link && <a style="color:white" class="font-bold mt-2 astro-a" href={demo_link}>Demo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-5 inline-block w-4 h-4">
 										<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
 									</svg></a> }
-				{demo_coming_soon && <p style="color:white" class="font-bold mt-2" >Demo Coming Soon</p>}
+				{misc_text && <p style="color:white" class="font-bold mt-2" >{misc_text}</p>}
 				{paper_link && <a style="color:white" class="font-bold mt-2 astro-a" href={paper_link}>Paper<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-5 inline-block w-4 h-4">
 					<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
 				</svg></a> }
@@ -39,7 +39,7 @@ const { href, title, body, image_src, demo_link, paper_link, demo_coming_soon } 
 		list-style: none;
 		display: flex;
 		padding: 1px;
-		background-color: rgb(var(--accent-off));
+		background-color:#2B1E3F;
 		background-image: none;
 		background-size: 400%;
 		

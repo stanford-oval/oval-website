@@ -1,44 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import News from '../components/News/News.jsx';
-import DropdownMenu from "../components/dropdown-menu";
-import MySwiper from '../components/ProjectSwiper.jsx';
 import Swiper from '../components/Swiper/swiper.astro';
-import Blob from '../components/Blob/index.html';
+import Blob from '../components/Blob/blob.astro';
 ---
 
 <Layout title="Stanford OVAL Lab">
 	<main>
-		<div class="mx-24 ">
-		<p style="margin-top: 10px" class="header">The Stanford OVAL Lab</p>
-		<p class="header"><span class="text-accent">Knowledge Center</span></p>
 
-		<h3  class="subheader">LED BY PROFESSOR MONICA LAM</h3>
-		<p style="text-align:center">
-			We build LLM-Augmented Cognition Systems (LLM-CSys) that combine the expressive language skills of LLMs with the interpretability and reliability of software systems. We connect LLMs with databases, compilers, and executive functions to create assistants that are more trustworthy and helpful for users.
-		</p>
-
-		<div>
-
-		<div class="blob"></div>
-   		</div>
-		<Swiper />
-		</div>
-
-		<div class="flex justify-center align-center mb-20">
+		<div style="background-color:  #000123">
+			<div class="mx-24 pt-5" >
+				<p class="header pt-8">The Stanford OVAL</p>
+				<p class="header pb-8 ">Knowledge Center</p>
 			
-			<a href="/projects" >
-				<button  style="background-color:rgb(var(--accent))" class="rounded-xl px-7 py-2 mr-5 text-center transition text-white"  name="Download CV">Try Our Demos</button>
-			</a>
-			<a href="#about" style="color:rgb(var(--accent))" class="flex self-center">Learn More About OVAL
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 mt-1">
-  				<path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-			</svg>
-			</a> 
+				
+				<p class="mx-20 font-medium text-center"   style="color:rgb(var(--accent-light));">
+					We build LLM-Augmented Cognition Systems (LLM-CSys) that combine the expressive language skills of LLMs with the interpretability and reliability of software systems. We connect LLMs with databases, compilers, and executive functions to create assistants that are more trustworthy and helpful.
+				</p>
 
-        </div>
-		<div style="background-color:rgb(var(--accent-off))" class="pb-20">
+			</div>
+		
+		<div class="flex justify-center align-center pt-10 pb-5">
+				
+				<a href="/projects" >
+					<button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition "  name="Download CV">Try Our Demos</button>
+				</a>
+				<a href="#about" style="color:rgb(var(--accent-light))" class="flex self-center">Learn More About OVAL
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 mt-1">
+					<path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+				</svg>
+				</a> 
+
+			</div>
+			
+
+			<div class="width ">
+				<div class="blob">
+				</div>	
+				<Swiper />
+			</div>
+
+			
+		</div>
+		<div style="background-color:#2B1E3F" class="pb-20">
 			<div class="mx-80 pt-24">
 				<h3  id="about" class="subheader">ABOUT OUR WORK</h3>
 				
@@ -97,16 +101,16 @@ import Blob from '../components/Blob/index.html';
 		z-index: -1;
 	}
 	.header {
-		font-size: 5rem;
+		font-size: 6rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: #D9C5ED
+		color: white
 
 	}
 	p {
-		color: #D9C5ED
+		color: white;
 	}
 	h3 {
 		font-size: 1rem;
@@ -157,8 +161,7 @@ import Blob from '../components/Blob/index.html';
 		height: 300px;
 		}
 	.subheader {
-		font-size: 1.2rem;
-		color: #D9C5ED
+		font-size: 1.5rem;
 	}
 	html {
 		scroll-behavior: smooth;
