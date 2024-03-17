@@ -14,13 +14,13 @@ const { href, title, body, image_src, demo_link, paper_link, misc_text } = Astro
 ---
 
 <li id={title} class="link-card rounded-3xl">
-	<div class="flex p-4">
-		<img src={image_src} class="h-60 w-auto mr-10"/>
+	<div class="flex flex-col md:flex-row p-4">
+		<img src={image_src} class="w-100 md:h-60 md:w-auto md:mr-10"/>
 		<div style="color:rgb(var(--accent-light))" class="flex flex-col p-4">
-			<h2 class="text-3xl font-bold">
+			<h2 class="text-2xl md:text-3xl font-bold">
 				{title}	
 			</h2>
-			<p>{body}</p>
+			<p class="text-base md:text-xl">{body}</p>
 			<div style="color:rgb(var(--accent-light))" class="flex">
 				{demo_link && <a style="color:white" class="font-bold mt-2 astro-a" href={demo_link}>Demo<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-5 inline-block w-4 h-4">
 										<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />

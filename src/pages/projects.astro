@@ -6,10 +6,10 @@ import Blob from '../components/Blob/blob.astro';
 
 <Layout title="Stanford OVAL — Projects">
 	<main >
-		<div class="mx-24 ">
-		<p  class="header mt-10">Projects</p>
+		<div class="mx-0 md:mx-24 ">
+		<p class="header mt-10 text-4xl md:text-6xl">Projects</p>
 		
-		<div class="pb-20 mt-20">
+		<div class="pb-20 mx-4 md:mx-0 mt-10 md:mt-20">
 			
 			<Card image_src="/assets/images/yelpbot.png" title="YelpBot (SUQL)" demo_link="https://yelpbot.genie.stanford.edu/" body="SUQL stands for Structured and Unstructured Query Language. It augments SQL with several important free text primitives for a precise, succinct, and expressive representation. It can be used to build chatbots for relational data sources that contain both structured and unstructured information. Similar to how text-to-SQL has seen great success, SUQL can be uses as the target language for hybrid databases, for instance, in finding restaurants with both structured data as well as free-text reviews."  />
 			<div class="mt-10" />
@@ -46,7 +46,7 @@ import Blob from '../components/Blob/blob.astro';
 		z-index: -1;
 	}
 	.header {
-		font-size: 5rem;
+		
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;

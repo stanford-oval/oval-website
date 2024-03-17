@@ -80,91 +80,10 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.demo-slider {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 10;
-  min-height: 0;
-}
-
-.swiper-material {
-  height: 300px;
-  width: calc(100% - 32px);
-  max-width: 800px;
-}
-
-.demo-material-image {
-  position: absolute;
-  left: 0%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--swiper-material-slide-border-radius);
-}
-
-.demo-material-label {
-  position: absolute;
-  font-size: 24px;
-  color: #fff;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  justify-content: flex-end;
-  align-items: center;
-  white-space: nowrap;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.2) 50%
-  );
-}
-
 :root {
   --swiper-material-scale: 1;
   --swiper-material-slide-size: 100%;
   --swiper-material-slide-border-radius: 32px;
-}
-.swiper-material-wrapper {
-  border-radius: var(--swiper-material-slide-border-radius);
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  box-sizing: border-box;
-  pointer-events: auto;
-}
-.swiper-material-content {
-  position: absolute;
-  transform: translate3d(0, 0, 0);
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-horizontal .swiper-material-content {
-  height: 100%;
-  width: var(--swiper-material-slide-size);
-  left: calc(50% - var(--swiper-material-slide-size) / 2);
-  top: 0;
-}
-.swiper-vertical .swiper-material-content {
-  width: 100%;
-  height: var(--swiper-material-slide-size);
-  top: calc(50% - var(--swiper-material-slide-size) / 2);
-  left: 0;
 }
 
 #app {
@@ -180,11 +99,17 @@ body {
 
 .swiper-carousel .swiper-slide {
   width: 680px;
-  height: 500px;
-
+  height: 400px;
   max-width: calc(100% - 48px);
   margin: 0 10px;
 }
+
+@media screen and (min-width: 640px) {
+  .swiper-carousel .swiper-slide {
+    height: 500px;
+  }
+}
+
 .swiper-carousel .swiper-carousel-animate-opacity {
   height: 100%;
 }

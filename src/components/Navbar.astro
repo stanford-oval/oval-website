@@ -24,22 +24,20 @@ const menuitems = [
 ];
 ---
 
-<header style="background-color:#000123; border-bottom: solid; border-color: #1D1E2D;" data-testId="header" class="py-2 flex border-b-red" >
+<header style="background-color:#000123; border-bottom: solid; border-color: #1D1E2D;" data-testId="header" class="py-2 flex justify-end" >
 	<Astronav >
-        <MenuItems class="flex justify-start" >
-			
-                <a
-                    aria-label="navigation link"
-                    href="/"
-                    
-                    class="flex py-2 text-xl text-white hover:text-orange dark:hover:text-orange font-semibold lg:px-3"
-                >
-                    Stanford Open Virtual Assistant Lab
-                </a>
-          
+        <MenuItems class="flex-1 md:flex-none">
+			<a
+				aria-label="navigation link"
+				href="/"
+				class="flex py-2 px-4 text-base sm:text-xl text-white hover:text-orange dark:hover:text-orange font-semibold lg:px-3"
+			>
+				Stanford Open Virtual Assistant Lab
+			</a>
 		</MenuItems>
 		
-		<MenuItems class="flex-1 flex">
+		
+		<MenuItems class="mt-2 hidden lg:mt-0 lg:flex lg:w-auto">
 			<ul class="flex flex-col lg:flex-row lg:gap-3">
 				{
 					menuitems.map((item) => (
@@ -61,11 +59,20 @@ const menuitems = [
 			</ul>
 		</MenuItems>
 
-        <MenuItems class="flex-1 flex justify-end" >
-			
+		<div class="block lg:hidden mr-4 mt-2">
+			<MenuIcon class="text-white" />
+		</div>
+
+        <div class="flex-1 flex justify-end hidden lg:flex lg:w-auto" >
              <a href="/projects"> <button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent));" class="rounded-lg px-5 py-2 mr-10 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange "  size={'sm'} >Try Our Demos</button></a>
-          
-		</MenuItems>
+		</div>
        
 	</Astronav>
 </header>
+
+<style>
+
+.astronav-open-icon {
+	align-self:center;
+}
+</style>

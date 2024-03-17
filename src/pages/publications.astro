@@ -228,10 +228,10 @@ const pubs = [
 
 <Layout title="Stanford OVAL — Publications">
 	<main>
-		<div class="mx-80 pb-24">
-		<p class="header mt-10">Publications</p>
+		<div class="mx-8 md:mx-80 pb-24">
+		<p class="header mt-10 text-4xl md:text-6xl">Publications</p>
 		
-		<div class="blob"></div>
+		<div class="hidden md:block blob"> </div>	
 		<ul>
 			{pubs.map((item) => (
 				<>
@@ -275,7 +275,7 @@ const pubs = [
 	}
 	
 	.header {
-		font-size: 5rem;
+		
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
