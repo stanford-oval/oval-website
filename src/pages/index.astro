@@ -6,12 +6,12 @@ import Blob from '../components/Blob/blob.astro';
 ---
 
 <Layout title="Stanford OVAL — Home">
-	<main style="background-color: #FFFEFA">
+	<main style="background-color: var(--bg)">
 		
 		<div class="mx-4 sm:mx-24 pt-5" >
 			<p class="header text-4xl sm:text-8xl pt-8 dark:text-black">The Stanford OVAL</p>
 			<p class="header text-4xl sm:text-8xl pb-8 ">Knowledge Center</p>
-			<p class="mx-4 sm:mx-20 text-xl sm:text-2xl font-medium text-center" style="color:#666;">
+			<p class="mx-4 sm:mx-20 text-xl sm:text-2xl font-medium text-center" style="color:var(--text-off);">
 				We build LLM-Augmented Cognition Systems (LLM-CSys) that combine the expressive language skills of LLMs with the interpretability and reliability of software systems. We connect LLMs with databases, compilers, and executive functions to create assistants that are more trustworthy and helpful.
 			</p>
 		</div>
@@ -19,7 +19,7 @@ import Blob from '../components/Blob/blob.astro';
 		<div class="flex flex-col sm:flex-row justify-center items-center pt-10 pb-5">
 			<div class="hidden md:block blob"> </div>	
 			<a href="/projects" >
-				<button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent-bright))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition" name="Download CV">Try Our Demos</button>
+				<button  style="background-color:rgb(var(--accent-pale)); color:rgb(var(--accent-bright))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition" name="Download CV">Try Our Demos</button>
 			</a>
 			<a  href="#about" style="color:rgb(var(--accent-bright))" class="flex self-center pt-4 text-lg sm:pt-0">Learn More About OVAL
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 mt-1">
@@ -35,7 +35,7 @@ import Blob from '../components/Blob/blob.astro';
 		</div>
 
 		
-		<div style="background-color:#FFFAF2" class="pb-20">
+		<div style="background-color:var(--bg-off)" class="pb-20">
 			<div class="mx-4 md:mx-80 pt-24">
 				<h3  id="about" class="subheader">ABOUT OUR WORK</h3>
 				<div class="mx-0 sm:mx-12 flex-col">
@@ -78,7 +78,7 @@ import Blob from '../components/Blob/blob.astro';
 
 <style>
 	main {
-		color: #444;
+		color: var(--text);
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -87,11 +87,11 @@ import Blob from '../components/Blob/blob.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: #444444;
+		color: var(--text);
 		z-index: 1;
 	}
 	p {
-		color: #444;
+		color: var(--text);
 		z-index: 1;
 	}
 	h3 {

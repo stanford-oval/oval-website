@@ -19,34 +19,9 @@
   color: var(--_color);
 }
 
-.content p {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: var(--_gap);
-}
-
-.content span {
-  font-size: 1.3em;
-  letter-spacing: 1.3px;
-  line-height: 1.2;
-}
-
-.content button {
-  display: block;
-  margin-top: var(--_gap);
-  padding: 0.6em 0.9em;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2em;
-  background: #020043;
-  margin-left: auto;
-  color: var(--_color);
-}
-
 .blob {
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.2;
   width: 100%;
   height: 80vh;
   aspect-ratio: 1/1;

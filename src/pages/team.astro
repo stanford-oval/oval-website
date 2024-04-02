@@ -5,7 +5,7 @@ import Person from '../components/Person.astro';
 
 <Layout title="Stanford OVAL — Team">
 	<main>
-		<div class="mx-8 md:mx-80 mb-40 ">
+		<div class="mx-8 md:mx-80 mb-20 ">
 		<p class="header mt-10 text-4xl md:text-6xl">Team</p>
 
 			
@@ -56,9 +56,7 @@ import Person from '../components/Person.astro';
 			
 		</div>
 
-		
-		
-		
+		<p style="color:rgb(var(--accent))"  class="footer mt-20 text-center"> Website made by <a href="https://tommybruzzese.com">Tommy Bruzzese</a> using React and Astro</p>
 		
 	</main>
 </Layout>
@@ -77,6 +75,10 @@ import Person from '../components/Person.astro';
 	}
 	.link-card {
 		background-color: #F6F0E4;
+	}
+	.footer a {
+		color: rgb(var(--accent-bright));
+		font-weight: 600;
 	}
 	
 	

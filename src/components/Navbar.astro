@@ -25,7 +25,7 @@ const menuitems = [
 ];
 ---
 
-<header style="background-color:#FFFEFA; border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2 px-2 flex justify-end" >
+<header style="background-color: var(--bg); border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2 px-2 flex justify-end" >
 	
 	<Astronav >
 
@@ -35,7 +35,7 @@ const menuitems = [
 				aria-label="navigation link"
 				href="/"
 				class="flex py-2 px-4 text-base sm:text-xl  font-semibold lg:px-3"
-				style="color: #444"
+				style="color: var(--text)"
 			>
 				Stanford Open Virtual Assistant Lab
 			</a>
@@ -71,7 +71,7 @@ const menuitems = [
 		</div>
 
         <div class="flex-1 flex justify-end hidden lg:flex lg:w-auto" >
-             <a href="/projects"> <button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent-bright));" class="rounded-lg px-5 py-2 mr-5 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange "  size={'sm'} >Try Our Demos</button></a>
+             <a href="/projects"> <button  style="background-color:rgb(var(--accent-pale)); color:rgb(var(--accent-bright));" class="rounded-lg px-5 py-2 mr-5 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange "  size={'sm'} >Try Our Demos</button></a>
 		</div>
        
 	</Astronav>

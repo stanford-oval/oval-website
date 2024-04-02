@@ -12,8 +12,7 @@ import Blob from '../components/Blob/blob.astro';
 		
 			
 		<h4 class=" mt-6 font-semibold " >Potential Partners</h4>
-		<p>We'd like to hear from you to understand the real-world use cases.
-		We welcome collaboration to experiment with the use of conversational technology in real-world cases.
+		<p>We'd like to hear from you to understand your real-world use cases. We welcome collaboration to experiment with how conversational technology can assist your problems.
 		
 		We welcome support via gift funds to accelerate our open-source research and to broaden our ability to collaborate and disseminate our results.</p>
 
@@ -22,7 +21,7 @@ import Blob from '../components/Blob/blob.astro';
 		Any partial funding for the rest of 2023 (e.g. $100,000) is appreciated to fund new students in the upcoming school year.</p>
 		<hr class="h-px my-8 opacity-10 bg-black border-0 ">
 		<h4 class=" mt-6 font-semibold " >PhD Students</h4>
-		<p>We welcome PhD students to join our team! Please contact Prof. Monica Lam.</p>
+		<p>We welcome PhD students to join our team! Please contact <a href="https://suif.stanford.edu/~lam/"> Prof. Monica Lam.</a></p>
 		<hr class="h-px my-8 opacity-10 bg-black border-0 ">
 		<h4 class=" mt-6 font-semibold " >Master's and Undergraduate Students</h4>
 		<p>Students interested in joining the Open Virtual Assistant Lab are encouraged to take the CS 224V course (Conversational Virtual Assistants with Deep Learning) offered in the Fall quarter.
@@ -41,15 +40,11 @@ import Blob from '../components/Blob/blob.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
+	a {
+		color: rgb(var(--accent-bright));
+		font-weight: 600;
 	}
+	
 	.header {
 		
 		font-weight: 700;
@@ -72,47 +67,7 @@ import Blob from '../components/Blob/blob.astro';
 	h4 {
 		color: rgb(var(--accent))
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.text-accent {
-		color: rgb(var(--accent));
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
 	
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-	.swiper {
-		width: 600px;
-		height: 300px;
-		}
-	.subheader {
-		font-size: 1.2rem;
-		color: #D9C5ED
-	}
+	
+	
 </style>
