@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Blob from '../components/Blob/blob.astro';
 
 
 const pubs = [
@@ -231,21 +230,21 @@ const pubs = [
 		<div class="mx-8 md:mx-80 pb-24">
 		<p class="header mt-10 text-4xl md:text-6xl">Publications</p>
 		
-		<div class="hidden md:block blob"> </div>	
+		
 		<ul>
 			{pubs.map((item) => (
 				<>
 				
-					<h4 class="text-white mt-6 font-semibold">{item.year}</h4>
+					<h4 class="mt-6 font-semibold">{item.year}</h4>
 					{item.publications.map((pub) => ( 
 						<li class="mt-4">
 							<a
 								href={pub.link}
-								style={{ color: 'white', fontStyle: 'italic' }}
+								style={{ fontStyle: 'italic' }}
 							>
 								{pub.title}
 							</a>
-							<p>{pub.authors}</p>
+							<p style="color:#444">{pub.authors}</p>
 							<p>{!pub.conference_no_in && <span>In</span>} <span class="italic">{pub.conference_title}</span> {pub.conference_misc}</p>
 							{pub.misc_links && pub.misc_links.map((link) => (
 								<a href={link.link}>{link.title}</a>
@@ -256,7 +255,7 @@ const pubs = [
 							))}
 						</li>
 					))}
-					<hr class="h-px my-8 opacity-10 bg-gray-100 border-0 ">
+					<hr class="h-px my-8 opacity-10 bg-gray-900 border-0 ">
 			
 				</>
 			))}
@@ -269,7 +268,7 @@ const pubs = [
 
 <style>
 	main {
-		color: white;
+		color: rgb(var(--accent-bright));
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -280,11 +279,11 @@ const pubs = [
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: #D9C5ED
+		color: rgb(var(--accent))
 
 	}
 	p {
-		color: #D9C5ED
+		color: #444
 	}
 	
 </style>

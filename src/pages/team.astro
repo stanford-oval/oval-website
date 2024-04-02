@@ -9,7 +9,7 @@ import Person from '../components/Person.astro';
 		<p class="header mt-10 text-4xl md:text-6xl">Team</p>
 
 			
-		<h4 class="text-white mt-6 font-semibold " >Senior Members</h4>
+		<h4 class="mt-6 font-semibold " >Senior Members</h4>
 		<div class="link-card rounded-xl mt-5 p-4 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
 			<Person image_src="/assets/images/profiles/monica.jpeg" name="Prof. Monica Lam (PI, CS)" href="https://suif.stanford.edu/~lam/"/>
 			<Person image_src="/assets/images/profiles/michael.jpeg" name="Prof. Michael Bernstein (CS)" href="https://hci.stanford.edu/msb/"/>
@@ -26,28 +26,33 @@ import Person from '../components/Person.astro';
 		<h4 class="text-white mt-6 font-semibold " >PhD Students</h4>
 		<div class="link-card rounded-xl mt-5 p-4 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
 			<Person image_src="/assets/images/profiles/harshit.png" name="Harshit Joshi" href=""/>
-			
+			<Person image_src="/assets/images/profiles/shicheng.jpeg" name="Shicheng Liu" href="https://george1459.github.io/"/>
+			<Person image_src="/assets/images/profiles/sina.jpeg" name="Sina Semnani" href=""/>
+			<Person image_src="/assets/images/profiles/yijia.jpeg" name="Yijia Shao" href=""/>
 		</div>
 
 		<h4 class="text-white mt-6 font-semibold " >Master Students</h4>
 		<div class="link-card rounded-xl mt-5 p-4 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-			
+			<Person image_src="/assets/images/profiles/tommy.jpg" name="Tommy Bruzzese"  href="https://tommybruzzese.com"/>
+			<Person image_src="/assets/images/profiles/larsen.jpeg" name="Larsen Weigle" href=""/>
+			<Person image_src="/assets/images/profiles/jialiang.jpg" name="Jialiang Xu" href=""/>
 		</div>
-		<h4 class="text-white mt-6 font-semibold " >Undergraduate Students</h4>
+
+		<h4 class=" mt-6 font-semibold " >Undergraduate Students</h4>
 		<div class="link-card rounded-xl mt-5 p-4 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-			
 		</div>
-		<h4 class="text-white mt-6 font-semibold " >PhD Alumni</h4>
+
+		<h4 class=" mt-6 font-semibold " >PhD Alumni</h4>
 		<div class="link-card rounded-xl mt-5 p-4 grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-			
 		</div>
-		<h4 class="text-white mt-6 font-semibold " >Former Students and Collaborators</h4>
-		<p class="text-white italic"> We thank them for their valuable contributions</p>
+
+		<h4 class=" mt-6 font-semibold " >Former Students and Collaborators</h4>
+		<p class=" italic"> We thank them for their valuable contributions</p>
 		<div class="rounded-xl my-5 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-			<p style="color:rgb(var(--accent-light))" class="text-center"><a href="https://www.linkedin.com/in/alberthchen/">Albert Chen</a></p>
-			<p style="color:rgb(var(--accent-light))" class="text-center"><a href="/">Zhiyang He</a></p>
-			<p style="color:rgb(var(--accent-light))" class="text-center"><a href="/">Jiaqi Xue</a></p>
-			<p style="color:rgb(var(--accent-light))" class="text-center"><a href="/">Aashna Garg</a></p>
+			<p style="color:rgb(var(--accent))" class="text-center"><a href="https://www.linkedin.com/in/alberthchen/">Albert Chen</a></p>
+			<p style="color:rgb(var(--accent))" class="text-center"><a href="/">Zhiyang He</a></p>
+			<p style="color:rgb(var(--accent))" class="text-center"><a href="/">Jiaqi Xue</a></p>
+			<p style="color:rgb(var(--accent))" class="text-center"><a href="/">Aashna Garg</a></p>
 			
 		</div>
 
@@ -67,93 +72,30 @@ import Person from '../components/Person.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	.link-card {
-		background-color:#2B1E3F;
+	h4 {
+		color: rgb(var(--accent));
 	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: rgb(var(--accent-off));;
-		opacity: 0.8;
+	.link-card {
+		background-color: #F6F0E4;
 	}
 	
-	p {
-		
-		margin-bottom: 0;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
+	
 	.header {
 		
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: #D9C5ED
-
-	}
-
-	h3 {
-		font-size: 1rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin: 15px;
-		
-
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.text-accent {
 		color: rgb(var(--accent));
+
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
+
 	
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
 	}
-	.swiper {
-		width: 600px;
-		height: 300px;
-		}
-	.subheader {
-		font-size: 1.2rem;
-		color: #D9C5ED
-	}
+	
 </style>

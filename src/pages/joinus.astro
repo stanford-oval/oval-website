@@ -9,9 +9,9 @@ import Blob from '../components/Blob/blob.astro';
 		<p class="header mt-10 text-4xl md:text-6xl">Join Us</p>
 		
 
-		<div class="hidden md:block blob"> </div>	
+		
 			
-		<h4 class="text-white mt-6 font-semibold " >Potential Partners</h4>
+		<h4 class=" mt-6 font-semibold " >Potential Partners</h4>
 		<p>We'd like to hear from you to understand the real-world use cases.
 		We welcome collaboration to experiment with the use of conversational technology in real-world cases.
 		
@@ -20,17 +20,19 @@ import Blob from '../components/Blob/blob.astro';
 		<p class="mt-6">We recommend an annual support of $250,000, the amount of funding needed to support two students a year.
 
 		Any partial funding for the rest of 2023 (e.g. $100,000) is appreciated to fund new students in the upcoming school year.</p>
-		<hr class="h-px my-8 opacity-10 bg-gray-100 border-0 ">
-		<h4 class="text-white mt-6 font-semibold " >PhD Students</h4>
+		<hr class="h-px my-8 opacity-10 bg-black border-0 ">
+		<h4 class=" mt-6 font-semibold " >PhD Students</h4>
 		<p>We welcome PhD students to join our team! Please contact Prof. Monica Lam.</p>
-		<hr class="h-px my-8 opacity-10 bg-gray-100 border-0 ">
-		<h4 class="text-white mt-6 font-semibold " >Master's and Undergraduate Students</h4>
+		<hr class="h-px my-8 opacity-10 bg-black border-0 ">
+		<h4 class=" mt-6 font-semibold " >Master's and Undergraduate Students</h4>
 		<p>Students interested in joining the Open Virtual Assistant Lab are encouraged to take the CS 224V course (Conversational Virtual Assistants with Deep Learning) offered in the Fall quarter.
 		The course provides the background material necessary to conduct research in conversational agents as welll as an opportunity to conduct an independent research project, supervised by Prof. Monica Lam.</p>
 
 		<p class="mt-6">Successful demonstration of independent research capability in the Fall quarter can lead to a Research Assistantship in subsequent quarters.</p>
-				
+		
+		
 	</main>
+	
 </Layout>
 
 <style>
@@ -54,11 +56,11 @@ import Blob from '../components/Blob/blob.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: #D9C5ED
+		color: rgb(var(--accent))
 
 	}
 	p {
-		color: #D9C5ED
+		color: rgb(var(--accent))
 	}
 	h3 {
 		font-size: 1rem;
@@ -66,8 +68,9 @@ import Blob from '../components/Blob/blob.astro';
 		line-height: 1;
 		text-align: center;
 		margin: 15px;
-		
-
+	}
+	h4 {
+		color: rgb(var(--accent))
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -81,7 +84,7 @@ import Blob from '../components/Blob/blob.astro';
 	}
 	.instructions {
 		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
+		border: 1px solid rgba(var(--accent), 25%);
 		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
@@ -90,13 +93,13 @@ import Blob from '../components/Blob/blob.astro';
 	.instructions code {
 		font-size: 0.8em;
 		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
 		border-radius: 4px;
 		padding: 0.3em 0.4em;
 	}
 	.instructions strong {
-		color: rgb(var(--accent-light));
+		color: rgb(var(--accent));
 	}
 	.link-card-grid {
 		display: grid;

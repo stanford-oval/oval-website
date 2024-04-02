@@ -93,7 +93,7 @@ body {
 
 :root {
   --swiper-navigation-color: #fff;
-  --swiper-pagination-color: rgb(var(--accent-light));
+  --swiper-pagination-color: rgb(var(--accent));
   --swiper-pagination-bullet-inactive-color: #fff;
 }
 

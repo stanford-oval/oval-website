@@ -6,21 +6,22 @@ import Blob from '../components/Blob/blob.astro';
 ---
 
 <Layout title="Stanford OVAL — Home">
-	<main style="background-color: #000123">
+	<main style="background-color: #FFFEFA">
 		
 		<div class="mx-4 sm:mx-24 pt-5" >
-			<p class="header text-4xl sm:text-8xl pt-8">The Stanford OVAL</p>
+			<p class="header text-4xl sm:text-8xl pt-8 dark:text-black">The Stanford OVAL</p>
 			<p class="header text-4xl sm:text-8xl pb-8 ">Knowledge Center</p>
-			<p class="mx-4 sm:mx-20 text-xl sm:text-2xl font-medium text-center" style="color:rgb(var(--accent-light));">
+			<p class="mx-4 sm:mx-20 text-xl sm:text-2xl font-medium text-center" style="color:#666;">
 				We build LLM-Augmented Cognition Systems (LLM-CSys) that combine the expressive language skills of LLMs with the interpretability and reliability of software systems. We connect LLMs with databases, compilers, and executive functions to create assistants that are more trustworthy and helpful.
 			</p>
 		</div>
 		
 		<div class="flex flex-col sm:flex-row justify-center items-center pt-10 pb-5">
+			<div class="hidden md:block blob"> </div>	
 			<a href="/projects" >
-				<button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition"  name="Download CV">Try Our Demos</button>
+				<button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent-bright))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition" name="Download CV">Try Our Demos</button>
 			</a>
-			<a  href="#about" style="color:rgb(var(--accent-light))" class="flex self-center pt-4 text-lg sm:pt-0">Learn More About OVAL
+			<a  href="#about" style="color:rgb(var(--accent-bright))" class="flex self-center pt-4 text-lg sm:pt-0">Learn More About OVAL
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 mt-1">
 					<path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 				</svg>
@@ -29,19 +30,19 @@ import Blob from '../components/Blob/blob.astro';
 		
 
 		<div class="width ">
-			<div class="hidden md:block blob"> </div>	
+			
 			<Swiper />
 		</div>
 
 		
-		<div style="background-color:#2B1E3F" class="pb-20">
+		<div style="background-color:#FFFAF2" class="pb-20">
 			<div class="mx-4 md:mx-80 pt-24">
 				<h3  id="about" class="subheader">ABOUT OUR WORK</h3>
 				<div class="mx-0 sm:mx-12 flex-col">
 				
 					<p class="text-2xl sm:text-4xl font-bold py-4 text-center"> <span><img class="h-8 w-8 inline-block align-top mr-3 opacity-50 " src = "/assets/images/quote-start.svg"/></span> Standalone LLMs are like the speech centers in our brains. They
 						rely on the prefrontal cortex for executive functions (attention, long-term planning) to communicate effectively. <span><img class="h-8 w-8 inline-block ml-3 opacity-50" src = "/assets/images/quote-end.svg"/><span></p>
-					<p class="text-center font-semibold text-xl sm:text-2xl">- Professor <a href="https://suif.stanford.edu/~lam/" class="text-white font-semibold">Monica Lam</a></h3>
+					<p class="text-center font-semibold text-xl sm:text-2xl">- Professor <a href="https://suif.stanford.edu/~lam/" class=" font-semibold">Monica Lam</a></h3>
 				</div>
 			
 				<h3  id="talk" class="pt-10 subheader">RECENT TALK</h3>
@@ -52,19 +53,19 @@ import Blob from '../components/Blob/blob.astro';
 					</a>
 				</div>
 				
-				<a href=https://www.youtube.com/watch?v=Sj4S_eGJitI" ><p style="color:#ffffff" class="text-center font-semibold texl-base sm:text-2xl pt-4 pb-2">"Controlling and Grounding Large Language Models for Conversational Assistants"</p></a> 
+				<a href=https://www.youtube.com/watch?v=Sj4S_eGJitI" ><p class="text-center font-semibold texl-base sm:text-2xl pt-4 pb-2" style="color:rgb(var(--accent-bright))">"Controlling and Grounding Large Language Models for Conversational Assistants"</p></a> 
 				<p class="text-sm sm:text-lg text-center">Generative AI and Foundation Models Workshop, Stanford Computer Forum, April 12, 2023</p>
 			
 				<hr class="h-px my-12 sm:my-8 mx-0 sm:mx-80 bg-gray-200 border-0 dark:bg-gray-700">
-				<p class="mt-6 font-400" > We invite students, researchers, and corporations to <a href="/joinus" class="font-bold" style="color:white;" >join us</a> to advance the state of the art in conversational agents research and to apply the technology to real-world use cases.</p>
+				<p class="mt-6 font-400" > We invite students, researchers, and corporations to <a href="/joinus" class="font-bold" style="color:rgb(var(--accent-bright))">join us</a> to advance the state of the art in conversational agents research and to apply the technology to real-world use cases.</p>
 
 				<div style="border-color:rgb(var(--accent))"  class="mt-12 border shadow-lg shadow-indigo-500/50 rounded-xl border-black border-4 p-8">
-				<h4 class="text-white font-semibold">News</h4>
+				<h4 class=" font-semibold">News</h4>
 				<News client:load />
 				</div>
 			<div>
-			<h4 class="mt-12 text-white font-semibold">Acknowledgement</h4>
-			<p>OVAL is supported by the National Science Foundation under Grant No.<a style="color:#ffffff" class="font-semibold" href=https://www.nsf.gov/awardsearch/showAward?AWD_ID=1900638&HistoricalAwards=false> 1900638</a>, the Alfred P. Sloan Foundation under Grant No. G-2020-13938, Microsoft, and the Verdant Foundation. We also want to thank our partners Alpha Vantage, Baidu, Picovoice, and Yelp for their support.</p>
+			<h4 class="mt-12 font-semibold">Acknowledgement</h4>
+			<p>OVAL is supported by the National Science Foundation under Grant No.<a style="color:rgb(var(--accent-bright))" class="font-semibold" href=https://www.nsf.gov/awardsearch/showAward?AWD_ID=1900638&HistoricalAwards=false> 1900638</a>, the Alfred P. Sloan Foundation under Grant No. G-2020-13938, Microsoft, and the Verdant Foundation. We also want to thank our partners Alpha Vantage, Baidu, Picovoice, and Yelp for their support.</p>
         </div>
 		
 		
@@ -77,7 +78,7 @@ import Blob from '../components/Blob/blob.astro';
 
 <style>
 	main {
-		color: white;
+		color: #444;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -86,10 +87,12 @@ import Blob from '../components/Blob/blob.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 0;
-		color: white
+		color: #444444;
+		z-index: 1;
 	}
 	p {
-		color: white;
+		color: #444;
+		z-index: 1;
 	}
 	h3 {
 		font-size: 1rem;
@@ -97,6 +100,7 @@ import Blob from '../components/Blob/blob.astro';
 		line-height: 1;
 		text-align: center;
 		margin: 15px;
+		z-index: 1;
 	}
 	html {
 		scroll-behavior: smooth;

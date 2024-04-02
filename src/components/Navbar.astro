@@ -2,6 +2,7 @@
 
 import Button from '../components/Button.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import ThemeIcon from '../components/ThemeIcon.astro';
 
 const menuitems = [
 	
@@ -24,20 +25,24 @@ const menuitems = [
 ];
 ---
 
-<header style="background-color:#000123; border-bottom: solid; border-color: #1D1E2D;" data-testId="header" class="py-2 flex justify-end" >
+<header style="background-color:#FFFEFA; border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2 px-2 flex justify-end" >
+	
 	<Astronav >
-        <MenuItems class="flex-1 md:flex-none">
+
+	
+        <MenuItems class="flex-1 lg:flex-none z-0">
 			<a
 				aria-label="navigation link"
 				href="/"
-				class="flex py-2 px-4 text-base sm:text-xl text-white hover:text-orange dark:hover:text-orange font-semibold lg:px-3"
+				class="flex py-2 px-4 text-base sm:text-xl  font-semibold lg:px-3"
+				style="color: #444"
 			>
 				Stanford Open Virtual Assistant Lab
 			</a>
 		</MenuItems>
 		
 		
-		<MenuItems class="mt-2 hidden lg:mt-0 lg:flex lg:w-auto">
+		<MenuItems class="mt-2 hidden lg:mt-0 lg:flex lg:w-auto z-0">
 			<ul class="flex flex-col lg:flex-row lg:gap-3">
 				{
 					menuitems.map((item) => (
@@ -46,8 +51,8 @@ const menuitems = [
 								<a
 									aria-label="navigation link"
 									href={item.path}
-                                    style="color:rgb(var(--accent-light));"
-									class="flex py-2  text-lg text-white hover:text-orange dark:hover:text-orange lg:px-3"
+                                    style="color:rgb(var(--accent-bright));"
+									class="flex py-2  text-lg text-white lg:px-3"
 								>
 									{item.title}
 								</a>
@@ -59,12 +64,14 @@ const menuitems = [
 			</ul>
 		</MenuItems>
 
+		
+
 		<div class="block lg:hidden mr-4 mt-2">
-			<MenuIcon class="text-white" />
+			<MenuIcon class="text-black" />
 		</div>
 
         <div class="flex-1 flex justify-end hidden lg:flex lg:w-auto" >
-             <a href="/projects"> <button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent));" class="rounded-lg px-5 py-2 mr-10 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange "  size={'sm'} >Try Our Demos</button></a>
+             <a href="/projects"> <button  style="background-color:rgb(var(--accent-light)); color:rgb(var(--accent-bright));" class="rounded-lg px-5 py-2 mr-5 text-center transition font-semibold focus-visible:ring-2 ring-offset-2 ring-orange "  size={'sm'} >Try Our Demos</button></a>
 		</div>
        
 	</Astronav>
