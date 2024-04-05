@@ -17,11 +17,11 @@ import Blob from '../components/Blob/blob.astro';
 		</div>
 		
 		<div class="flex flex-col sm:flex-row justify-center items-center pt-10 pb-5">
-			<div class="hidden md:block blob"> </div>	
-			<a href="/projects" >
+			<div class="blob"> </div>	
+			<a href="/projects" class="z-10" >
 				<button  style="background-color:rgb(var(--accent-pale)); color:rgb(var(--accent-bright))" class="rounded-lg px-7 py-2 mr-5 font-semibold text-center transition" name="Download CV">Try Our Demos</button>
 			</a>
-			<a  href="#about" style="color:rgb(var(--accent-bright))" class="flex self-center pt-4 text-lg sm:pt-0">Learn More About OVAL
+			<a href="#about" style="color:rgb(var(--accent-bright))" class="flex self-center pt-4 text-lg sm:pt-0 z-10">Learn More About OVAL
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-6 h-6 mt-1">
 					<path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
 				</svg>
@@ -42,13 +42,13 @@ import Blob from '../components/Blob/blob.astro';
 				
 					<p class="text-2xl sm:text-4xl font-bold py-4 text-center"> <span><img class="h-8 w-8 inline-block align-top mr-3 opacity-50 " src = "/assets/images/quote-start.svg"/></span> Standalone LLMs are like the speech centers in our brains. They
 						rely on the prefrontal cortex for executive functions (attention, long-term planning) to communicate effectively. <span><img class="h-8 w-8 inline-block ml-3 opacity-50" src = "/assets/images/quote-end.svg"/><span></p>
-					<p class="text-center font-semibold text-xl sm:text-2xl">- Professor <a href="https://suif.stanford.edu/~lam/" class=" font-semibold">Monica Lam</a></h3>
+					<p class="text-center font-semibold text-xl sm:text-2xl">- Professor <a href="https://suif.stanford.edu/~lam/" class="z-10 relative font-semibold">Monica Lam</a></h3>
 				</div>
 			
-				<h3  id="talk" class="pt-10 subheader">RECENT TALK</h3>
+				<h3 id="talk" class="pt-10 subheader">RECENT TALK</h3>
 				
 				<div class="pt-4 text-center">
-					<a href="https://www.youtube.com/watch?v=Sj4S_eGJitI">
+					<a href="https://www.youtube.com/watch?v=Sj4S_eGJitI" class="z-10 relative">
 						<img class="mx-auto h-auto w-11/12 sm:w-8/12 rounded-3xl" src="/assets/images/monica-talk.png"/>
 					</a>
 				</div>
