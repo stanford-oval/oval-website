@@ -2,6 +2,11 @@ import styles from "./news.css";
 
 const newsItems = [
   {
+    date: "Mar 2024",
+    event:
+    'Jackie Yang presented the paper <a href="https://jya.ng/amma">AMMA: Adaptive Multimodal Assistants Through Automated State Tracking and User Model-Directed Guidance Planning</a> at the 2024 IEEE Conference on Virtual Reality and 3D User Interfaces (VR), Orlando, FL.',
+  },
+  {
     date: "Dec 2023",
     event:
       'Elizaveta Pertseva presented the paper <a href="https://arxiv.org/abs/2305.14202">Fine-tuned LLMs Know More, Hallucinate Less with Few-Shot Sequence-to-Sequence Semantic Parsing over Wikidata</a> at the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP), Singapore.',
