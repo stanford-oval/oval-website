@@ -8,10 +8,21 @@
   overflow: hidden;
 }
 
+.content {
+  --_gap: 1.5rem;
+  --_color: hsl(60 92% 71% / 1);
+  width: 58%;
+  max-width: 500px;
+  padding: 2.75rem;
+  border: 2px solid hsl(60deg 67% 44% / 64%);
+  border-radius: 20px;
+  color: var(--_color);
+}
+
 .blob {
   position: absolute;
-  opacity: 0.2;
-  width: 100%;
+  opacity: 0.15;
+  width: 90%;
   height: 80vh;
   aspect-ratio: 1/1;
   animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
@@ -25,6 +36,9 @@
     rgba(0, 164, 173, 0.8) 67%,
     rgba(118, 74, 166, 0.8) 81%
   );
+
+  box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f;
 }
 
 @keyframes animate {
@@ -33,15 +47,13 @@
     border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
   }
   50% {
-    translate: 0% 20%;
+    translate: 0% 5%;
     border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
     width: 70%;
-    scale: 1.15;
   }
 
   100% {
     translate: 0% 80%;
     border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-    scale: 1.05;
   }
 }
