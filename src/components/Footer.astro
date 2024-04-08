@@ -1,0 +1,42 @@
+---
+
+import Button from '../components/Button.astro';
+import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import ThemeIcon from '../components/ThemeIcon.astro';
+
+const menuitems = [
+	
+	{
+		title: 'Projects',
+		path: '/projects',
+	},
+    {
+		title: 'Publications',
+		path: '/publications',
+	},
+	 {
+		title: 'Team',
+		path: '/team',
+	},
+    {
+		title: 'Join Us',
+		path: '/joinus',
+	},
+];
+---
+
+<footer style="background-color: var(--bg); border-bottom: solid; border-color: #FFFDF6;" data-testId="header" class="py-2 px-2 flex flex-col justify-center items-center lg:flex-row " >
+
+	<p style="color: var(rgb(--accent))">  © 2024 by Stanford Open Virtual Assistant Lab <p/>
+	<a href={"https://github.com/stanford-oval"} class="lg:ml-4">
+		<img src={'/assets/images/github-logo.png'} class="h-8 self-center "/>
+	</a>
+
+</footer>
+
+<style>
+
+.astronav-open-icon {
+	align-self:center;
+}
+</style>
