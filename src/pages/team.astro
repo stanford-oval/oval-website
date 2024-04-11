@@ -52,13 +52,71 @@ import Person from '../components/Person.astro';
 
 		<h4 class=" mt-6 font-semibold " >Former Students and Collaborators</h4>
 		<p class=" italic"> We thank them for their valuable contributions</p>
-		<div class="rounded-xl my-5 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-			<p style="color:rgb(var(--accent))" class="text-center"><a href="https://www.linkedin.com/in/alberthchen/">Albert Chen</a></p>
-			<p style="color:rgb(var(--accent))" class="text-center">Zhiyang He</p>
-			<p style="color:rgb(var(--accent))" class="text-center">Jiaqi Xue</p>
-			<p style="color:rgb(var(--accent))" class="text-center">Aashna Garg</p>
+		
+		<ul class="row grid gap-6 mt-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/alberthchen/">Albert Chen</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="http://zhi-yang.me/">Zhiyang He</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/jiaqi-x-1529904a/">Jiaqi Xue</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/aashnagarg/">Aashna Garg</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/jiwon-seo-b749485/?originalSubdomain=kr">Jiwon Seo</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://platformlab.stanford.edu/student-sadjad-fouladi.php">Sadjad Fouladi</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/reynis/">Reynis Vazquez</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://rakeshr1.people.stanford.edu/">Rakesh Ramesh</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/richardryang/">Richard Yang</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://ryachen01.github.io/PersonalWebsite/">Ryan Cheng</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://elviszhang.com/">Elvis Zhang</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://stanford.edu/~rickygv/">Ricky Grannis-Vu</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/agata-foryciarz/detail/photo/">Agata Foryciarz</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://euirim.org/">Euirim Choi</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://www.linkedin.com/in/xiaomeng-jin-316080107/">Xiaomeng (Tracy) Jin</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://greentfrapp.github.io/">Swee Kiat (SK) Lim</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="http://appsrv.cse.cuhk.edu.hk/~jianli/">Jian Li</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://web.stanford.edu/~kearns/">Ryan Othniel Kearns</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://profiles.stanford.edu/194970">Neha Konakalla</a>
+			</li>
+			<li class="col-xs-6 col-sm-4">
+				<a href="https://web.stanford.edu/~satojk/">Lucas Sato</a>
+			</li>
+		</ul>
 			
-		</div>
+		
 
 		<p style="color:rgb(var(--accent))"  class="footer mt-20 text-center"> Website made by <a href="https://tommybruzzese.com">Tommy Bruzzese</a> using React and Astro</p>
 		
@@ -94,6 +152,9 @@ import Person from '../components/Person.astro';
 		margin-bottom: 0;
 		color: rgb(var(--accent));
 
+	}
+	li, p {
+		color: rgb(var(--accent))
 	}
 
 	
