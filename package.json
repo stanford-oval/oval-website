@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.6.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@material-tailwind/react": "^2.1.9",
