@@ -2,6 +2,26 @@ import styles from "./news.css";
 
 const newsItems = [
   {
+    date: "June 2024",
+    event:
+    '"WikiChat: Stopping the hallucination of large language model chatbots by few-shot grounding on Wikipedia" won <a href="https://x.com/wikiworkshop/status/1803793163665977481">The Wikimedia Research Award of the Year 2024</a>!',
+  },
+  {
+    date: "June 2024",
+    event:
+    'Yijia Shao presented the paper <a href="https://arxiv.org/abs/2402.14207">Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico',
+  },
+  {
+    date: "June 2024",
+    event:
+    'Shicheng Liu presented the paper <a href="https://arxiv.org/abs/2311.09818">SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico',
+  },
+  {
+    date: "May 2024",
+    event:
+    '3 OVAL projects are awarded <a href="https://brown.columbia.edu/2024-25-magic-grants/">2024-2025 Magic Grants</a>! "African History from the Bottom Up with LLM-Augmented Agents" led by Sina Semnani, "Cross-Lingual Multi-Perspective News" led by Jialiang Xu, and "DataTalk: All Documents and Data, All at Once, All Verified" led by Shicheng Liu.',
+  },
+  {
     date: "Mar 2024",
     event:
     'Jackie Yang presented the paper <a href="https://jya.ng/amma">AMMA: Adaptive Multimodal Assistants Through Automated State Tracking and User Model-Directed Guidance Planning</a> at the 2024 IEEE Conference on Virtual Reality and 3D User Interfaces (VR), Orlando, FL.',
