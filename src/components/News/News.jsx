@@ -2,9 +2,14 @@ import styles from "./news.css";
 
 const newsItems = [
   {
+    date: "August 2024",
+    event:
+      'Jialiang Xu will present the paper <a href="https://arxiv.org/abs/2406.00562">SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing</a> at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL), Bangkok, Thailand'
+  },
+  {
     date: "June 2024",
     event:
-    '"WikiChat: Stopping the hallucination of large language model chatbots by few-shot grounding on Wikipedia" won <a href="https://x.com/wikiworkshop/status/1803793163665977481">The Wikimedia Research Award of the Year 2024</a>!',
+    '<a href="https://arxiv.org/abs/2305.14292">WikiChat: Stopping the hallucination of large language model chatbots by few-shot grounding on Wikipedia</a> won <a href="https://x.com/wikiworkshop/status/1803793163665977481">The Wikimedia Foundation Research Award of the Year 2024</a>!',
   },
   {
     date: "June 2024",
