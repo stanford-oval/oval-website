@@ -4,7 +4,7 @@ const newsItems = [
   {
     date: "August 2024",
     event:
-      'Jialiang Xu will present the paper <a href="https://arxiv.org/abs/2406.00562">SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing</a> at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL), Bangkok, Thailand'
+      'Jialiang Xu will present the paper <a href="https://arxiv.org/abs/2406.00562">SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing</a> at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL), Bangkok, Thailand.'
   },
   {
     date: "June 2024",
@@ -14,12 +14,12 @@ const newsItems = [
   {
     date: "June 2024",
     event:
-    'Yijia Shao presented the paper <a href="https://arxiv.org/abs/2402.14207">Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico',
+    'Yijia Shao presented the paper <a href="https://arxiv.org/abs/2402.14207">Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico.',
   },
   {
     date: "June 2024",
     event:
-    'Shicheng Liu presented the paper <a href="https://arxiv.org/abs/2311.09818">SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico',
+    'Shicheng Liu presented the paper <a href="https://arxiv.org/abs/2311.09818">SUQL: Conversational Search over Structured and Unstructured Data with Large Language Models</a> at the 2024 North American Chapter of Association for Computational Linguistics (NAACL), Mexico City, Mexico.',
   },
   {
     date: "May 2024",
