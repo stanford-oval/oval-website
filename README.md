@@ -13,3 +13,5 @@ npm run dev
 ```sh
 npm run build && npm run preview
 ```
+## Vercel Production
+Vercel will automatically build the latest commit to the main branch. Please do not push build files (in `dist` or `.vercel/output`) as they will prevent fresh builds from occurring in new deployments
