@@ -2,9 +2,21 @@ import styles from "./news.css";
 
 const newsItems = [
   {
+    date: "November 2024",
+    event:'George Liu and Sina Semnani presented the paper <a href="https://arxiv.org/abs/2407.11417">SPINACH: SPARQL-Based Information Navigation for Challenging Real-World Questions</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
+  },
+   {
+    date: "November 2024",
+    event:'Yucheng Jiang presented the paper <a href="https://arxiv.org/abs/2408.15232">Into the Unknown Unknowns: Engaged Human Learning through Participation in Language Model Agent Conversations</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
+  },
+  {
+    date: "November 2024",
+    event:'Kazuaki Furumai presented the paper <a href="https://arxiv.org/abs/2407.03585">Zero-shot Persuasive Chatbots with LLM-Generated Strategies and Information Retrieval</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
+  },
+  {
     date: "August 2024",
     event:
-      'Jialiang Xu will present the paper <a href="https://arxiv.org/abs/2406.00562">SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing</a> at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL), Bangkok, Thailand.'
+      'Jialiang Xu presented the paper <a href="https://arxiv.org/abs/2406.00562">SPAGHETTI: Open-Domain Question Answering from Heterogeneous Data Sources with Retrieval and Semantic Parsing</a> at the 62nd Annual Meeting of the Association for Computational Linguistics (ACL), Bangkok, Thailand.'
   },
   {
     date: "June 2024",
