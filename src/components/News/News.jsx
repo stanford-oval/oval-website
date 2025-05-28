@@ -3,7 +3,7 @@ import styles from "./news.css";
 const newsItems = [
   {
     date: "November 2024",
-    event:'George Liu and Sina Semnani presented the paper <a href="https://arxiv.org/abs/2407.11417">SPINACH: SPARQL-Based Information Navigation for Challenging Real-World Questions</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
+    event:'Shicheng Liu and Sina Semnani presented the paper <a href="https://arxiv.org/abs/2407.11417">SPINACH: SPARQL-Based Information Navigation for Challenging Real-World Questions</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
   },
    {
     date: "November 2024",
