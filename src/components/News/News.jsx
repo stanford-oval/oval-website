@@ -2,6 +2,11 @@ import styles from "./news.css";
 
 const newsItems = [
   {
+    date: "October 2026",
+    event:
+      '<a href="https://conversations.heynoora.com">Noora Social Conversations</a> launches as a free public beta to help people practice scenarios for empathy, question-asking, compliments, and more.',
+  },
+  {
     date: "November 2024",
     event:'Shicheng Liu and Sina Semnani presented the paper <a href="https://arxiv.org/abs/2407.11417">SPINACH: SPARQL-Based Information Navigation for Challenging Real-World Questions</a> at the 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP), Miami, Florida, USA.'
   },
