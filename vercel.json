@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source": "/releases/:path*",
+      "destination": "https://crowdie.stanford.edu/:path*"
+    }
+  ]
+}
